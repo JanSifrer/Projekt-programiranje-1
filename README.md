@@ -2,6 +2,7 @@
 Analiza prodajanih nepremičnin - stanovanj
 
 Analiziral bom kakšne nepremičnine prodajajo v Ljubljani.
+
 [Nepremicnine.net] (https://www.nepremicnine.net/)
 
 Za vsako nepremičnino bom zajel:
