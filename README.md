@@ -1,17 +1,18 @@
 # Projekt-programiranje-1
-Analiza prodajanih nepremičnin - stanovanj
+Analiza študenskega dela
 
-Analiziral bom kakšne nepremičnine prodajajo v Ljubljani.
+Analiziral bom dela ki so ponujena študentom po vsej Sloveniji.
 
-[Nepremicnine.net] (https://www.nepremicnine.net/)
+[e-servis] (https://www.studentski-servis.com/studenti/)
 
-Za vsako nepremičnino bom zajel:
-* Lokacijo
-* Ceno
-* Velikost
-* Leto izdelave
-* Nadstropje stanovanja
+Za vsako delo bom zajel:
+* Lokacijo dela
+* Plačilo (bruto in neto)
+* Vrsto dela
+* Delavnik
+* Koliko študentov iščejo
 
 Delovne hipoteze:
-* Pogledal bom kje v Ljubljani prodajajo najdražja stanovanja, in kje najcenejša
-* Koliko v povprečju stane 1m^2 stanovanja v Ljubljani
+* Primerjal bom v katerih mestih v Sloveniji se študentom najbolj splača delati.
+* Pogledal bom tudi koliko vrsta dela in delovnik uplivata na plačilo.
+* Analiziral bom tudi ali so določena dela v katerih delih Slovenije višje plačana kot drugod.
