@@ -3,10 +3,10 @@ import re
 import requests
 import orodja
 
-def shrani_toliko_strani(n=50):
+def shrani_toliko_del(n=50):
     stevilo_prostih_del = n
     url = 'https://www.studentski-servis.com/index.php?t=prostaDela&hp=true&page=1&perPage={}&sort=1&workType=1&keyword='.format(stevilo_prostih_del)
-    orodja.shrani_spletno_stran(url, 'prosta_dela1.html')
+    orodja.shrani_spletno_stran(url, 'prosta_dela.html')
 
 def vsebina_datoteke(ime_datoteke):
     with open(ime_datoteke, 'r', encoding='utf-8') as r:

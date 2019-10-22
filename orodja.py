@@ -21,6 +21,7 @@ def shrani_spletno_stran(url, ime_datoteke, vsili_prenos=False):
             print('shranjeno že od prej!')
             return
         r = requests.get(url)
+        r.encoding='UTF-8'
     except requests.exceptions.ConnectionError:
         print('stran ne obstaja!')
     else:
