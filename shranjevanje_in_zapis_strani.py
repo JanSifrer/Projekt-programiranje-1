@@ -3,8 +3,7 @@ import re
 import requests
 import orodja
 
-def shrani_toliko_del(n=50):
-    stevilo_prostih_del = n
+def shrani_toliko_del(stevilo_prostih_del=50):
     url = 'https://www.studentski-servis.com/index.php?t=prostaDela&hp=true&page=1&perPage={}&sort=1&workType=1&keyword='.format(stevilo_prostih_del)
     orodja.shrani_spletno_stran(url, 'prosta_dela.html')
 
