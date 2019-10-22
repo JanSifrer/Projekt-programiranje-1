@@ -51,4 +51,3 @@ def podatki_iz_oglasov(ime_datoteke): #to funkcijo moramše popravit!!
     print(stevec)
     print(len(sez))
 
-#orodja.shrani_spletno_stran('www.google.si', 'ka')
