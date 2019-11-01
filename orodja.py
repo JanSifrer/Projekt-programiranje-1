@@ -37,9 +37,15 @@ def vsebina_datoteke(ime_datoteke):
         return datoteka.read()
 
 
+csv.register_dialect('myDialect',
+delimiter = '|',
+quoting=csv.QUOTE_NONE,
+skipinitialspace=True)
+
 def zapisi_csv(slovarji, imena_polj, ime_datoteke):
     '''Iz seznama slovarjev ustvari CSV datoteko z glavo.'''
     pripravi_imenik(ime_datoteke)
+    #csv.register_dialect('myDialect', delimiter = '|', quoting=csv.QUOTE_ALL, skipinitialspace=True)  #(polja med sabo ločuje s '|')
     with open(ime_datoteke, 'w', encoding='utf-8') as csv_datoteka:
         writer = csv.DictWriter(csv_datoteka, fieldnames=imena_polj)
         writer.writeheader()
