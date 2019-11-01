@@ -1,16 +1,20 @@
 # Projekt-programiranje-1
 Analiza študenskega dela
 
-Analiziral bom dela ki so ponujena študentom po vsej Sloveniji.
+Analiziral bom dela ki so ponujena študentom po vsej Sloveniji, datum prenesenih podatkov 1. 11. 2019.
 
 [e-servis] (https://www.studentski-servis.com/studenti/)
 
 Za vsako delo bom zajel:
-* Lokacijo dela
-* Plačilo (bruto in neto)
+* Šifro dela
 * Vrsto dela
-* Delavnik
-* Koliko študentov iščejo
+* Plačilo (neto in bruto)
+* Lokacijo dela
+* Trajanje dela
+* Število prostih delovnih mest
+* Delovnik
+* Naravo dela
+* Opis dela
 
 Delovne hipoteze:
 * Primerjal bom v katerih mestih v Sloveniji se študentom najbolj splača delati.
