@@ -19,7 +19,7 @@ def posamezni_oglasi(ime_datoteke):
 vzorec_oglasa= re.compile(
     r'class="title">(?P<naslov>.*?)'
     r'(<strong>(?P<podnaslov>.*?)</strong>)?</sp'
-    r'.*?<strong>(?P<placa>.*?)</strong>'
+    r'.*?<strong>(?P<neto_placa>.*?)</str(.*?\((?P<bruto_placa>.*?)\))?'
     r'.*?<strong>'
     r'(?P<lokacija>.*?)</strong>'
     r'.*?<div class="jobContent col">'
@@ -36,7 +36,7 @@ vzorec_oglasa= re.compile(
 
 
 
-#ime_datoteke = 'prosta_dela.html'
+ime_datoteke = 'prosta_dela.html'
 
 def pridobi_podatke_o_oglasih(ime_datoteke):
     seznam_oglasov = posamezni_oglasi(ime_datoteke)  #seznam po oglasih
@@ -49,7 +49,7 @@ def pridobi_podatke_o_oglasih(ime_datoteke):
             stevec += 1
     print(stevec)
 
-    orodja.zapisi_csv(slovar_iskanih_podatkov, ['naslov', 'podnaslov', 'placa', 'lokacija', 'opis', 'stevilo_mest', 'trajanje', 'delovnik', 'sifra', 'narava_dela'], 'prosta_dela1.csv')
+    orodja.zapisi_csv(slovar_iskanih_podatkov, ['naslov', 'podnaslov', 'neto_placa', 'bruto_placa', 'lokacija', 'opis', 'stevilo_mest', 'trajanje', 'delovnik', 'sifra', 'narava_dela'], 'prosta_dela1.csv')
     print('končano:', len(slovar_iskanih_podatkov))
 
 
