@@ -1,7 +1,7 @@
 # Projekt-programiranje-1
 Analiza študenskega dela
 
-Analiziral bom dela ki so ponujena študentom po vsej Sloveniji, datum prenesenih podatkov 1. 11. 2019.
+Analiziral bom dela ki so ponujena študentom po vsej Sloveniji, datum prenešenih podatkov 1. 11. 2019.
 
 [e-servis] (https://www.studentski-servis.com/studenti/)
 
