@@ -52,4 +52,4 @@ def pridobi_podatke_o_oglasih(ime_datoteke):
     #orodja.zapisi_csv(slovar_iskanih_podatkov, ['naslov', 'podnaslov', 'neto_placa', 'bruto_placa', 'lokacija', 'opis', 'stevilo_mest', 'trajanje', 'delovnik', 'sifra', 'narava_dela'], 'prosta_dela1.csv')
     #print('končano:', len(slovar_iskanih_podatkov))
 
-    orodja.zapisi_json(slovar_iskanih_podatkov, 'kr.json')
+    orodja.zapisi_json(slovar_iskanih_podatkov, 'prosta_dela2.json')
