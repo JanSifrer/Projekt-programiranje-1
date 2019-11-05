@@ -16,6 +16,8 @@ Za vsako delo bom zajel:
 * Naravo dela
 * Opis dela
 
+Zajete podatke sem shranil v csv in json datoteko.
+
 Delovne hipoteze:
 * Primerjal bom v katerih mestih v Sloveniji se študentom najbolj splača delati.
 * Pogledal bom tudi koliko vrsta dela in delovnik uplivata na plačilo.
