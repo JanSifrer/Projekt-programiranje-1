@@ -34,8 +34,6 @@ vzorec_oglasa= re.compile(
     flags=re.DOTALL
 )
 
-
-
 ime_datoteke = 'prosta_dela.html'
 
 def pridobi_podatke_o_oglasih(ime_datoteke):
@@ -47,7 +45,7 @@ def pridobi_podatke_o_oglasih(ime_datoteke):
             slovar_zadetkov = zadetek.groupdict()
             slovar_iskanih_podatkov.append(slovar_zadetkov)
             stevec += 1
-    print(stevec)
+    print(stevec, slovar_iskanih_podatkov)
 
     #orodja.zapisi_csv(slovar_iskanih_podatkov, ['naslov', 'podnaslov', 'neto_placa', 'bruto_placa', 'lokacija', 'opis', 'stevilo_mest', 'trajanje', 'delovnik', 'sifra', 'narava_dela'], 'prosta_dela1.csv')
     #print('končano:', len(slovar_iskanih_podatkov))
