@@ -1,5 +1,5 @@
-x = "POSTOJNA, SEŽANA, PIVKA, ILIRSKA BISTRICA, CERKLJE NA GORENJSKEM"
-y = x.split()
+import math
+
 
 def boljsa_lokacija(x):
     razbitje = x.split()
@@ -101,3 +101,19 @@ def boljsa_lokacija(x):
 
 def koliko_besed_je_v_imenu(x):
     return len(x.split())
+
+def ali_je_neto(c):
+    if type(c) == type('21'):
+        return 'neto' in c
+
+def zaokrozena_neto_placa(x):
+    razbitje = x.split()
+    stevilo = razbitje[0].split(',')
+    if stevilo[0][0] in '9876543210':
+        if len(stevilo[1])==1:
+            return math.ceil((int(stevilo[0]) + (0.1)*int(stevilo[1]))*4)/4
+        if len(stevilo[1])==2:
+            return math.ceil((int(stevilo[0]) + (0.01)*int(stevilo[1]))*4)/4
+    return x
+
+
