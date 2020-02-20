@@ -1,3 +1,4 @@
+import pandas as pd
 import math
 
 
@@ -115,5 +116,22 @@ def zaokrozena_neto_placa(x):
         if len(stevilo[1])==2:
             return math.ceil((int(stevilo[0]) + (0.01)*int(stevilo[1]))*4)/4
     return x
+
+def iskanje_povprecja(mesto,tabela_placa):
+
+    seznam = pd.DataFrame(columns=["lokacija", "naslov", "placa"])
+    list1=tabela_placa['naslov'].unique()
+    for j in list1:
+        pomozna_1=tabela_placa[(tabela_placa['boljsa_lokacija']==mesto) & (tabela_placa['naslov']==j)]
+        if pomozna_1.empty:
+            povprecje = 0
+        else:
+            povprecje = pomozna_1["zaokrozena_placa"].mean().round()
+        seznam = seznam.append({
+                "lokacija": mesto,
+                "naslov":  j,
+                "placa": povprecje
+                }, ignore_index=True)
+    return seznam[seznam['placa']>0].reset_index(drop=True)
 
 
