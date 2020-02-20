@@ -107,7 +107,7 @@ def ali_je_neto(c):
     if type(c) == type('21'):
         return 'neto' in c
 
-def zaokrozena_neto_placa(x):
+def zaokrozeno(x):
     razbitje = x.split()
     stevilo = razbitje[0].split(',')
     if stevilo[0][0] in '9876543210':
@@ -133,5 +133,24 @@ def iskanje_povprecja(mesto,tabela_placa):
                 "placa": povprecje
                 }, ignore_index=True)
     return seznam[seznam['placa']>0].reset_index(drop=True)
+
+def iskanje_placila_po_mestih(naslov,tabela_placa):
+
+    seznam = pd.DataFrame(columns=["lokacija", "naslov", "placa"])
+    list1=tabela_placa['boljsa_lokacija'].unique().tolist()
+    for j in list1:
+        pomozna_1=tabela_placa[(tabela_placa['boljsa_lokacija']==j) & (tabela_placa['naslov']==naslov)]
+        if pomozna_1.empty:
+            povprecje = 0
+        else:
+            povprecje = pomozna_1["zaokrozena_placa"].mean().round()
+        seznam = seznam.append({
+                "lokacija": j,
+                "naslov":  naslov,
+                "placa": povprecje
+                }, ignore_index=True)
+    return seznam[seznam['placa']>0].reset_index(drop=True)
+
+
 
 
